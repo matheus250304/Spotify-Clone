@@ -42,24 +42,73 @@
                 Português do Brasil
             </button>
         </nav>
-        <main>
-            <header>
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input placeholder="O que você quer ouvir?">
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-navigation">
+                    <button class="arrow-button" disabled><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="arrow-button"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="header-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input class="search-input" placeholder="O que você quer ouvir?">
+                </div>
+                <div class="header-user">
+                    <button class="user-button">Inscreva-se</button>
+                    <button class="user-button-primary">Entrar</button>
+                </div>
             </header>
-            <section>
-                <h2>Artistas Populares</h2>
-                <div class="artists-grid"></div>
-                <!-- inserir dados com js -->
-
-                <h2>Albuns Populares</h2>
-                <div class="albums-grid"></div>
-                <!-- inserir dados com js -->
-            </section>
+            <div class="content-wrapper">
+                <section class="grid-section">
+                    <h2>Artistas Populares</h2>
+                    <div class="grid-container" id="artists-grid">
+                        <!-- Artistas inseridos via JS -->
+                    </div>
+                </section>
+                <section class="grid-section">
+                    <h2>Álbuns Populares</h2>
+                    <div class="grid-container" id="albums-grid">
+                        <!-- Álbuns inseridos via JS -->
+                    </div>
+                </section>
+            </div>
         </main>
-
     </div>
 
+    <footer class="player-bar">
+        <div class="now-playing">
+            <img src="./img/album-dos-predios.jpeg" alt="Capa do álbum Dos Prédios Deluxe" class="now-playing-img">
+            <div class="now-playing-info">
+                <h5>Dos Prédios Deluxe</h5>
+                <p>Veigh</p>
+            </div>
+            <i class="fa-regular fa-heart"></i>
+        </div>
+        <div class="player-controls">
+            <div class="player-buttons">
+                <button class="control-button"><i class="fa-solid fa-shuffle"></i></button>
+                <button class="control-button"><i class="fa-solid fa-backward-step"></i></button>
+                <button class="control-button play-main"><i class="fa-solid fa-play"></i></button>
+                <button class="control-button"><i class="fa-solid fa-forward-step"></i></button>
+                <button class="control-button"><i class="fa-solid fa-repeat"></i></button>
+            </div>
+            <div class="progress-bar-container">
+                <span>1:12</span>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <span>3:21</span>
+            </div>
+        </div>
+        <div class="player-options">
+            <button class="control-button"><i class="fa-solid fa-microphone-lines"></i></button>
+            <button class="control-button"><i class="fa-solid fa-bars"></i></button>
+            <button class="control-button"><i class="fa-solid fa-computer"></i></button>
+            <button class="control-button"><i class="fa-solid fa-volume-high"></i></button>
+            <div class="volume-bar">
+                <div class="volume-progress"></div>
+            </div>
+        </div>
+    </footer>
 </body>
 <script src="./scripts.js"></script>
 </html>
